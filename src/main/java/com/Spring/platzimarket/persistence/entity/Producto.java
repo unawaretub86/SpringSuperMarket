@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 
 @Getter @Setter @ToString
@@ -29,7 +30,7 @@ public class Producto {
     private String codigoBarras;
 
     @Column(name = "precio_venta")
-    private double precioVenta;
+    private BigDecimal precioVenta;
 
     @Column(name= "cantidad_stock")
     private Integer cantidadStock;
