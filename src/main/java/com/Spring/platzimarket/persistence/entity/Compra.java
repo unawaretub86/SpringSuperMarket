@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter @Setter @ToString
 @Entity
@@ -29,5 +30,12 @@ public class Compra {
     private String comentario;
 
     private String estado;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private Cliente cLiente;
+
+    @OneToMany(mappedBy = "compra")
+    private List<ComprasProducto> productos;
 
 }

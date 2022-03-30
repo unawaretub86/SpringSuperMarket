@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter @Setter @ToString
 @Entity
@@ -20,4 +21,7 @@ public class Categoria {
     private String descripcion;
 
     private boolean estado;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 }

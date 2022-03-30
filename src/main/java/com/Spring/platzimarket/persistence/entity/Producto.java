@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 
 @Getter @Setter @ToString
@@ -36,4 +37,10 @@ public class Producto {
     private Integer cantidadStock;
 
     private boolean estado;
+
+
+//    mapping, eso evita que se borren o se actualice esta categoria, solo para recuperar a que categoria pertenece el producto
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria;
 }
