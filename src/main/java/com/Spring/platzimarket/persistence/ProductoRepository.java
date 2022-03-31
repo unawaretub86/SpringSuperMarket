@@ -5,6 +5,7 @@ import com.Spring.platzimarket.domain.repository.ProductRepository;
 import com.Spring.platzimarket.persistence.crud.ProductoCrudRepository;
 import com.Spring.platzimarket.persistence.entity.Producto;
 import com.Spring.platzimarket.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,11 @@ import java.util.Optional;
 //esto le indica a spring que esto lo que hace es interactuar con la db
 @Repository
 public class ProductoRepository implements ProductRepository {
+//    esto hace que spring haga la inyeccion y haga las dependencias
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     @Override
