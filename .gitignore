@@ -13,6 +13,12 @@ build/
 .settings
 .springBeans
 .sts4-cache
+<<<<<<< HEAD
+=======
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+>>>>>>> 1821303a07dad206557c0a0192093c58d46094b3
 
 ### IntelliJ IDEA ###
 .idea
