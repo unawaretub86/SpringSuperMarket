@@ -13,6 +13,6 @@ public class MarketUserDeailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return new User("Esteban", "{noop}Gomez", new ArrayList<>());
+        return new User("esteban", "{noop}gomez", new ArrayList<>());
     }
 }
